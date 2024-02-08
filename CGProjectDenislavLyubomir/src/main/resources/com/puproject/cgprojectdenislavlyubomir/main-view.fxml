@@ -4,9 +4,17 @@
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.puproject.cgprojectdenislavlyubomir.DrawingController">
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Button?>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.puproject.cgprojectdenislavlyubomir.DrawingController">
     <children>
         <ComboBox fx:id="shapeComboBox" layoutX="14.0" layoutY="10.0" prefWidth="150.0" />
+        <ColorPicker fx:id="colorPicker" layoutX="170.0" layoutY="10.0" />
+        <Slider fx:id="opacitySlider" layoutX="300.0" layoutY="20.0" min="0.0" max="1.0" value="1.0" />
+        <Button text="Draw" onAction="#switchToDrawMode" layoutX="450" layoutY="10"/>
+        <Button text="Drag" onAction="#switchToDragMode" layoutX="500" layoutY="10"/>
+        <Button text="Clear" onAction="#clearCanvas" layoutX="550" layoutY="10"/>
         <Canvas fx:id="drawingCanvas" height="1600.0" width="1900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
     </children>
 </AnchorPane>
